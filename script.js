@@ -18,7 +18,7 @@ function processUserInput() {
 
     if (userInput === '07') {
         // Load the ASCII art again from ascii.html
-        fetch('ascii.html')
+        fetch('output.html')
             .then(response => response.text())
             .then(ascii => {
                 asciiContainer.textContent = ascii;
