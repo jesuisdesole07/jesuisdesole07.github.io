@@ -18,12 +18,13 @@ function processUserInput() {
 			.then(response => response.text())
 			.then(ascii => {
 				// Replace spaces and newlines with empty string
-				ascii = ascii.textContent.replace(/[\s\n]/g, '');
+				ascii = ascii.replace(/[\s\n]/g, '');
 
 				// Add a newline before each "-"
 				ascii = ascii.replace(/-/g, '\n-');
 
 				// Update the ASCII art container with modified text
+				asciiContainer.textContent = ascii;
 				asciiContainer.textContent = ascii;
 
 			})
