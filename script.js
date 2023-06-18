@@ -17,8 +17,6 @@ function processUserInput() {
 		fetch('output.html')
 			.then(response => response.text())
 			.then(ascii => {
-				asciiContainer.textContent = ascii;
-
 				// Replace spaces and newlines with empty string
 				ascii = ascii.textContent.replace(/[\s\n]/g, '');
 
